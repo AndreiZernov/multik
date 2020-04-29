@@ -1,0 +1,36 @@
+.loading {
+  height: 100vh;
+  width: 100vw;
+  margin: auto;
+  position: fixed;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-position: center;
+  background-color: rgba(0, 0, 0, 1);
+  background-repeat: no-repeat;
+  background-size: cover;
+  & img {
+    width: 80px;
+    margin: 50px;
+    animation-name: pulse;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+    animation-duration: 2s;
+  }
+  & h1 {
+    font-weight: bold;
+    font-family: 'Freckle Face', cursive;
+    font-size: 4rem;
+  }
+}
+
+
+@keyframes pulse {
+  0%   { transform: scale(1); }
+  25%  { transform: scale(1.3);  }
+  50%  { transform: scale(1.3);  }
+  100% { transform: scale(1);  }
+}

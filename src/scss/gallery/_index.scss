@@ -1,0 +1,48 @@
+.gallery {
+  width: 90vw;
+  height: 90vh;
+  padding: 60px 0 10px;
+  margin: auto;
+  background: rgb(10,11,13);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  & video {
+    margin: 10px;
+    max-width: 90vw;
+  }
+  & img {
+    max-height: 200px;
+    width: auto;
+    margin: 8px;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}
+
+.gallery-title {
+  position: fixed;
+  top: 20px;
+  font-family: 'Freckle Face', cursive;
+  left: 50px;
+}
+
+.gallery-img {
+  margin: auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 100vw;
+  height: 80vh;
+}
+
+.btn-back {
+  position: absolute;
+  opacity: 0.6;
+  top: 70px;
+  right: 40px;
+  z-index: 10;
+  width: 50px ;
+  cursor: pointer;
+}

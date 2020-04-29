@@ -1,0 +1,48 @@
+.about-page {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 90vw;
+  height: 90vh;
+  margin: auto;
+  justify-content: center;
+  text-align: center;
+  font-family: sans-serif;
+  padding: 100px 2vw 20px;
+  & h1 {
+    font-size: 2rem;
+    font-family: 'Frijole', cursive;
+  }
+  & p {
+    font-size: .8rem;
+    text-align: justify;
+  }
+  & .face {
+    min-width: 300px;
+    max-width: 400px;
+    @media (min-width: 768px) {
+      margin-left: 55px;
+    }
+    & #profile {
+      width: 300px;
+      max-width: 400px;
+    }
+  }
+  & .bio {
+    min-width: 250px;
+    max-width: 500px;
+  }
+
+  @media (min-width: 768px) {
+    flex-direction: row-reverse;
+    flex-wrap: nowrap;
+    & h1 {
+      font-size: 3rem;
+    }
+    & p {
+      font-size: 1rem;
+    }
+  }
+
+}

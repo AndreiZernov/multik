@@ -1,0 +1,53 @@
+.home {
+  position: fixed;
+  left: 10px;
+  top: 10px;
+  z-index: 19;
+  & img {
+    width: 30px;
+    height: 40px;
+  }
+}
+
+.header {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  display: none;
+  transform: translateX(-50%);
+  font-family: 'Frijole', cursive;
+  z-index: 19;
+  & h1 {
+    font-size: 1rem;
+  }
+  @media (min-width: 768px) {
+    display: block;
+  }
+}
+
+.header-drop {
+  text-align: right;
+  display: flex;
+  padding-top: 14vh;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,.8);
+  flex-direction: column;
+  position: fixed;
+  font-family: 'Freckle Face', cursive;
+  transition: 0.5s;
+  & a {
+    padding-right: 5vw;
+    font-size: 7vh;
+    display: block;
+  }
+}
+
+.header-icon {
+  z-index: 19;
+  cursor: pointer;
+  position: fixed;
+  right: 10px;
+  transition: 1s;
+}

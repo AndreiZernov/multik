@@ -1,0 +1,23 @@
+import React from 'react'
+import MainSlide from '../components/MainSlide'
+import MainHero from '../components/MainHero'
+import { useDataItems } from "../context/dataItems-context"
+import 'bootstrap/dist/css/bootstrap.min.css'
+
+
+const MainPage = () => {
+  const { photos, heroPhotos, smallPhotos } = useDataItems()
+  return (
+    <div>
+      <MainHero data={heroPhotos}/>
+      <MainSlide name="portrait" data={smallPhotos.smallPortrait}/>
+      <MainSlide name="conceptual" data={smallPhotos.smallConceptual}/>
+      <MainSlide name="still_life" data={smallPhotos.smallStill_life}/>
+      <MainSlide name="candid" data={smallPhotos.smallCandid}/>
+      <MainSlide name="urban" data={smallPhotos.smallUrban}/>
+      <MainSlide name="links" data={photos.video}/>
+    </div>
+  )
+}
+ 
+export default MainPage

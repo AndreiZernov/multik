@@ -27,7 +27,9 @@
   height: 420px;
   background-color: inherit;
   display: block;
-  & h1 {
+  & #h1, & h1 {
+    display: block;
+    height: 50px;
     margin: 10px auto;
     width: 100%;
     transform: translateX(2.5%);
@@ -72,7 +74,7 @@
   @media (min-width: 1024px) {
 
   }
-  & h1 { grid-area: h; }
+  & #h1, & h1 { grid-area: h; }
   & a:nth-child(2) { grid-area: a; }
   & a:nth-child(3) { grid-area: b; }
   & a:nth-child(4) { grid-area: c; }

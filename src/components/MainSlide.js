@@ -28,7 +28,6 @@ const MainPage = ({name, data}) => {
       new ScrollMagic.Scene({
         duration: 1000,
         triggerHook: 0,
-        offset: 15,
         triggerElement: slides.current
       })
       .setTween( tlHeroScroll1.restart() )
@@ -38,7 +37,6 @@ const MainPage = ({name, data}) => {
       new ScrollMagic.Scene({
         duration: 1000,
         triggerHook: 0,
-        offset: 15,
         triggerElement: slides.current
       })
       .setTween( tlHeroScroll2.restart() )
@@ -50,9 +48,8 @@ const MainPage = ({name, data}) => {
       .to(slides.current, 1, { justifyContent: 'center'})
 
       new ScrollMagic.Scene({
-        duration: 350,
+        duration: 1000,
         triggerHook: 0,
-        offset: 15,
         triggerElement: slides.current
       })
       .setTween( tlHeroScroll3.restart() )
@@ -70,7 +67,7 @@ const MainPage = ({name, data}) => {
     >
       <div className='main-slides'
         style={{
-          overflow: name === "links" && "hidden",
+          overflow: name === "links" &&  window.innerWidth < 768 && "hidden",
           height: name === "links" && window.innerWidth < 768 && "300px",
           paddingTop:  name === "links" &&  window.innerWidth < 768  && '10vh',
           gridTemplateAreas:
@@ -80,7 +77,10 @@ const MainPage = ({name, data}) => {
           name === 'links' ? linksGrid : null
         }}
       >
-        <h1>{name.toUpperCase().replace('_', ' ')}</h1>
+        {name === 'links' ?
+          <h1>{name.toUpperCase().replace('_', ' ')}</h1> :
+          <Link id='h1' to={name}>{name.toUpperCase().replace('_', ' ')}</Link>
+        }
 
         {
           name !== 'links' ?
@@ -132,4 +132,4 @@ const linksGrid = `"h h h h h h h h h h"
                     "l l l l l l l l l l"
                     "l l l l l l l l l l"
                     "l l l l l l l l l l"
-                    "l l l l l l l l l l"`
+                    "...   ...   ...   ...   ...   ...   ...   ...   ...   ...  "`

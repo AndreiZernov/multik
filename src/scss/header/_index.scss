@@ -28,7 +28,7 @@
 .header-drop {
   text-align: right;
   display: flex;
-  padding-top: 14vh;
+  padding-top: 8vh;
   top: 0;
   width: 100vw;
   height: 100vh;
@@ -37,7 +37,11 @@
   position: fixed;
   font-family: 'Freckle Face', cursive;
   transition: 0.5s;
-  padding-right: 5vw;
+  padding-right: 70px;
+  & img {
+    width: 7vh;
+    min-width: 30px;
+  }
   & a {
     font-size: 7vh;
     display: block;

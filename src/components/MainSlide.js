@@ -28,6 +28,7 @@ const MainPage = ({name, data}) => {
       new ScrollMagic.Scene({
         duration: 1000,
         triggerHook: 0,
+        offset: 15,
         triggerElement: slides.current
       })
       .setTween( tlHeroScroll1.restart() )
@@ -37,6 +38,7 @@ const MainPage = ({name, data}) => {
       new ScrollMagic.Scene({
         duration: 1000,
         triggerHook: 0,
+        offset: 15,
         triggerElement: slides.current
       })
       .setTween( tlHeroScroll2.restart() )
@@ -48,8 +50,9 @@ const MainPage = ({name, data}) => {
       .to(slides.current, 1, { justifyContent: 'center'})
 
       new ScrollMagic.Scene({
-        duration: 500,
+        duration: 350,
         triggerHook: 0,
+        offset: 15,
         triggerElement: slides.current
       })
       .setTween( tlHeroScroll3.restart() )
@@ -124,9 +127,9 @@ const stillLifeCandidGrid = `"h h h h h h h h h h"
                     "... ... ... c c c c a a a"`
 
 const linksGrid = `"h h h h h h h h h h"
-                    "... ... ... ... ... ... ... ... ... ..."
-                    "... ... ... l l l l l ... ..."
-                    "... ... ... l l l l l ... ..."
-                    "... ... ... l l l l l ... ..."
-                    "... ... ... l l l l l ... ..."
-                    "... ... ... ... ... ... ... ... ... ..."`
+                    "l l l l l l l l l l"
+                    "l l l l l l l l l l"
+                    "l l l l l l l l l l"
+                    "l l l l l l l l l l"
+                    "l l l l l l l l l l"
+                    "l l l l l l l l l l"`

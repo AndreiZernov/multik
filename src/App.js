@@ -7,7 +7,6 @@ import Header from './components/Header'
 import LoadingPage from './pages/LoadingPage'
 
 
-
 const App = () => {
   const { loading } = useDataItems()
   return (

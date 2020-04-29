@@ -37,10 +37,20 @@
   position: fixed;
   font-family: 'Freckle Face', cursive;
   transition: 0.5s;
+  padding-right: 5vw;
   & a {
-    padding-right: 5vw;
     font-size: 7vh;
     display: block;
+  }
+  .logos {
+    align-items: flex-end;
+  }
+  .logos-wrap {
+    padding-right: 0;
+    margin-right: 0;
+    & img {
+      margin-right: 0;
+    }
   }
 }
 

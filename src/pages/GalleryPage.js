@@ -1,6 +1,7 @@
 import React from 'react'
 import { useRouteMatch } from 'react-router-dom'
 import { useDataItems } from "../context/dataItems-context"
+import { TimelineMax } from 'gsap'
 import { Link, Switch, Route } from 'react-router-dom'
 import GalleryCarouselPage from './GalleryCarouselPage'
 
@@ -11,9 +12,12 @@ const GalleryPage = () => {
   let topic = url.substring(1)
   let data = smallPhotos[`small${topic.replace(topic[0], topic[0].toUpperCase())}`]
   let videoData = photos[topic]
+  new TimelineMax()
+    .fromTo('.animatedLinks', .5, {opacity: 0}, {opacity: 0 })
+    .to('.animatedLinks', .5, {opacity: 1 })
 
   return (
-    <>
+    <div className='page'>
       <Switch>
         <Route exact path={path}>
           <div className='gallery'>
@@ -21,7 +25,7 @@ const GalleryPage = () => {
             {
               topic !== 'video' ?
                 data.map((image, i) =>
-                  <Link key={i} to={`${url}/${topic}-carousel-${i}`}>
+                  <Link key={i} to={`${url}/${topic}-carousel-${i}`} className="animatedLinks">
                     <img src={image} alt='photos' />
                   </Link>
                 )
@@ -29,11 +33,11 @@ const GalleryPage = () => {
               videoData.map((link, i) =>
                 <video key={i} muted controls width="auto" height="250"
                   onMouseOver={event => event.target.play()}
-                  onMouseOut={event => event.target.pause()}>
-                  <source poster={require('../assets/mltl_white.png')}
-                    src={link} type="video/mp4" />
-                  <source poster={require('../assets/mltl_white.png')}
-                    src={link} type="video/webm" />
+                  onMouseOut={event => event.target.pause()}
+                  className="animatedLinks"
+                >
+                  <source src={link} type="video/mp4" />
+                  <source src={link} type="video/webm" />
                   Your browser does not support the video tag.
                 </video>
               )
@@ -41,10 +45,10 @@ const GalleryPage = () => {
           </div>
         </Route>
         <Route path={`${path}/:topicId`}>
-          <GalleryCarouselPage data={data}/>
+          <GalleryCarouselPage data={photos[topic]}/>
         </Route>
       </Switch>
-    </>
+    </div>
   )
 }
 

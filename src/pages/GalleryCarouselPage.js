@@ -10,7 +10,7 @@ const GalleryCarouselPage = ({data}) => {
   const handleSelect = (selected) => { setIndex(selected) }
 
   return (
-    <>
+    <div className='page'>
       <Carousel activeIndex={index} onSelect={handleSelect} className="mt-5 pt-3">
       {data.map((image, i) =>
         <Carousel.Item key={i}>
@@ -19,7 +19,7 @@ const GalleryCarouselPage = ({data}) => {
       )}
       </Carousel>
       <img className='btn-back' src={require("../assets/photos.png")} onClick={() => history.goBack()} alt="Go back" />
-    </>
+    </div>
   )
 }
 

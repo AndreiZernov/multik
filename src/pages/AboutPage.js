@@ -7,7 +7,7 @@ const AboutPage = () => {
   const { about } = useDataItems()
 
   return (
-    <div className='about-page'>
+    <div className='about-page page'>
       <div className="face">
         <img id="profile" src={about.profileImg} alt="profile" />
         <Logos />

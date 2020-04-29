@@ -8,7 +8,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 const MainPage = () => {
   const { photos, heroPhotos, smallPhotos } = useDataItems()
   return (
-    <div>
+    <div className='page'>
       <MainHero data={heroPhotos}/>
       <MainSlide name="portrait" data={smallPhotos.smallPortrait}/>
       <MainSlide name="conceptual" data={smallPhotos.smallConceptual}/>
@@ -19,5 +19,5 @@ const MainPage = () => {
     </div>
   )
 }
- 
+
 export default MainPage

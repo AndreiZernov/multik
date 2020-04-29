@@ -6,8 +6,6 @@ import App from './App'
 import './css/app.css'
 
 
-
-
 ReactDOM.render(
   <DataItemsProvider>
     <Router>

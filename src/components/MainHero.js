@@ -1,14 +1,20 @@
 import React, { useRef, useEffect } from 'react'
-import { TimelineMax } from 'gsap'
+import { TimelineMax, TimelineLite } from 'gsap'
 import { Link } from 'react-router-dom'
 import ScrollMagic from 'scrollmagic'
 import Carousel from 'react-bootstrap/Carousel'
 const controller = new ScrollMagic.Controller();
 
+
 const MainHero = ({data}) => {
   const hero = useRef(null)
 
   useEffect( () => {
+    new TimelineLite({delay: 1})
+      .to('#title-bg', 2.5, { scaleX: 0 })
+    new TimelineMax()
+      .fromTo('.hero-1, .hero-2, .hero-3, .hero-4, .hero-5', 1.5, {opacity: 0}, {opacity: 1 })
+
     if (window.innerWidth > 768) {
       let tlHero = new TimelineMax({paused: true})
         .to('.navbar', 1, {scale: 1 })
@@ -29,6 +35,10 @@ const MainHero = ({data}) => {
       <div div='main-hero' ref={hero}>
         <div className="navbar">
           <Link id='title' to='/about'>ARTEM ZUEV</Link>
+          <div
+            id="title-bg"
+            style={{ width: "100%", height: "50%", position: 'absolute', zIndex: 100, backgroundColor: 'rgb(10,11,13)', transform: 'scaleX(1)', transformOrigin: "right" }}
+          />
           {heroLinks.map(link =>
             <a key={link} className="navbar-btn" href={`#${link}`}>{link.replace('_', ' ')}</a>
           )}

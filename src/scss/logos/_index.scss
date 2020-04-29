@@ -10,11 +10,10 @@
     align-items: center;
     justify-content: center;
   }
-  & div {
+  & img {
+    cursor: pointer;
     margin: 20px;
     padding: 0;
-  }
-  & img {
     width: 7vh;
   }
 }

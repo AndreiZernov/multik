@@ -13,7 +13,8 @@ const MainHero = ({data}) => {
     new TimelineLite({delay: 1})
       .to('#title-bg', 2.5, { scaleX: 0 })
     new TimelineMax()
-      .fromTo('.hero-1, .hero-2, .hero-3, .hero-4, .hero-5', 1.5, {opacity: 0}, {opacity: 1 })
+      .fromTo('.hero-1, .hero-2, .hero-3, .hero-4, .hero-5', .5, {opacity: 0}, {opacity: 0 })      .to('.hero-1, .hero-2, .hero-3, .hero-4, .hero-5', .5, {opacity: 1 })
+
 
     if (window.innerWidth > 768) {
       let tlHero = new TimelineMax({paused: true})
@@ -60,7 +61,7 @@ const MainHero = ({data}) => {
               <Carousel.Item key={i}>
                 <img className="d-block w-100" src={data[i]} alt={link} />
                 <Carousel.Caption>
-                  <h3>{link.toUpperCase().replace('_', ' ')}</h3>
+                  <Link className="h2" to={link}>{link.toUpperCase().replace('_', ' ')}</Link>
                 </Carousel.Caption>
               </Carousel.Item>
             )}

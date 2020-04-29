@@ -1,6 +1,5 @@
 import React, {useRef, useEffect} from 'react'
 import { Link } from 'react-router-dom'
-import Logos from './Logos'
 import gsap , { TimelineMax } from 'gsap'
 import ScrollMagic from 'scrollmagic'
 import { ScrollMagicPluginGsap } from "scrollmagic-plugin-gsap"
@@ -67,32 +66,37 @@ const MainPage = ({name, data}) => {
     >
       <div className='main-slides'
         style={{
-          overflow: name === "links" &&  window.innerWidth < 768 && "hidden",
-          height: name === "links" && window.innerWidth < 768 && "300px",
-          paddingTop:  name === "links" &&  window.innerWidth < 768  && '10vh',
-          gridTemplateAreas:
-          name === 'portrait' ? portraitGrid :
-          name === 'conceptual' || name === 'urban' ? conceptualGrid :
-          (name === 'candid' || name === 'still_life')  ? stillLifeCandidGrid :
-          name === 'links' ? linksGrid : null
+          overflow: name === "video" &&  window.innerWidth < 768 && "hidden",
+          height: name === "video" && window.innerWidth < 768 && "140px",
         }}
       >
-        {name === 'links' ?
+        {name === 'video' ?
           <h1>{name.toUpperCase().replace('_', ' ')}</h1> :
           <Link id='h1' to={name}>{name.toUpperCase().replace('_', ' ')}</Link>
         }
 
         {
-          name !== 'links' ?
-            <>
+          name !== 'video' ?
+            <div className="slide-links"
+              style={{
+                gridTemplateAreas:
+                name === 'portrait' ? portraitGrid :
+                name === 'conceptual' || name === 'urban' ? conceptualGrid :
+                (name === 'candid' || name === 'still_life')  ? stillLifeCandidGrid : null
+              }}
+            >
               {[ 1, 2, 3, 4, 5 ].map(num =>
                 <Link key={num} to={name} style={{backgroundImage: `url(${data[num-1]})`}} className={`main-${name}${num}-img`}></Link>
               )}
-            </>
+            </div>
           :
-          <>
-            <Logos data={data} name="slides"/>
-          </>
+          <video muted controls width="auto" height="400" autoPlay>
+            <source poster={require('../assets/mltl_white.png')}
+              src={data[0]} type="video/mp4" />
+            <source poster={require('../assets/mltl_white.png')}
+              src={data[0]} type="video/webm" />
+            Your browser does not support the video tag.
+          </video>
         }
       </div>
     </div>
@@ -122,14 +126,6 @@ const stillLifeCandidGrid = `"h h h h h h h h h h"
                     "d d d ... b b b e e e"
                     "d d d ... b b b e e e"
                     "d d d ... b b b e e e"
-                    "d d d c c c c a a a"
-                    "d d d c c c c a a a"
-                    "... ... ... c c c c a a a"`
-
-const linksGrid = `"h h h h h h h h h h"
-                    "l l l l l l l l l l"
-                    "l l l l l l l l l l"
-                    "l l l l l l l l l l"
-                    "l l l l l l l l l l"
-                    "l l l l l l l l l l"
-                    "...   ...   ...   ...   ...   ...   ...   ...   ...   ...  "`
+                    "d d d c c c a a a a"
+                    "d d d c c c a a a a"
+                    "... ... ... c c c a a a a"`

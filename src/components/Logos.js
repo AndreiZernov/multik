@@ -5,18 +5,6 @@ import OverlayTrigger from 'react-bootstrap/OverlayTrigger'
 
 const Logos = ({name, data}) =>
   <div className="logos">
-    { name === 'slides' &&
-      <video muted controls width="auto" height="400"
-        onMouseOver={event => event.target.play()}
-        onMouseOut={event => event.target.pause()}
-      >
-        <source poster={require('../assets/mltl_white.png')}
-          src={data[0]} type="video/mp4" />
-        <source poster={require('../assets/mltl_white.png')}
-          src={data[0]} type="video/webm" />
-        Your browser does not support the video tag.
-      </video>
-    }
     <div className="logos-wrap">
       <img onClick={() => window.open( 'https://urlgeni.us/instagram/multik', '_blank' )} src={require('../assets/instagram.png')} alt="insagram" />
       <img onClick={() => window.open( 'mailto:zuevmultik@me.com', '_blank' )} src={require('../assets/mail.png')} alt="mail" />

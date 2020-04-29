@@ -35,16 +35,19 @@
   background: rgba(0,0,0,.8);
   flex-direction: column;
   position: fixed;
-  font-family: 'Freckle Face', cursive;
   transition: 0.5s;
   padding-right: 70px;
   & img {
-    width: 7vh;
+    width: 5vh;
     min-width: 30px;
   }
   & a {
-    font-size: 7vh;
+    font-family: 'Freckle Face', cursive;
+    letter-spacing: 1.5;
+    font-weight: 100;
+    font-size: 5vh;
     display: block;
+    margin: 1vh 0;
   }
   .logos {
     align-items: flex-end;

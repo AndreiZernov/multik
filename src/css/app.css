@@ -133,13 +133,13 @@ h1 {
       color: white; }
   @media (min-width: 768px) {
     .navbar {
-      width: 84%;
-      padding-right: 70px; }
+      width: 100%;
+      padding: 70px 70px 20px; }
       .navbar #title {
         width: 250px; } }
   @media (min-width: 1024px) {
     .navbar {
-      width: 75%; } }
+      width: 100%; } }
 
 .hero {
   padding: 0 20px 0;
@@ -201,25 +201,33 @@ h1 {
   grid-template-areas: "h" "a" "b" "c" "d" "e";
   grid-gap: 10px;
   justify-content: center;
-  align-items: center;
   border-top: solid 5px #0a0b0d;
-  z-index: 1;
-  overflow-x: scroll;
-  scroll-direction: horizontal;
-  scroll-behavior: smooth;
-  white-space: nowrap;
   height: 420px;
   background-color: inherit;
-  display: block; }
+  display: block;
+  position: relative; }
   .main-slides #h1, .main-slides h1 {
+    position: absolute;
     display: block;
-    height: 50px;
+    height: 40px;
     margin: 10px auto;
-    width: 100%;
-    transform: translateX(2.5%);
+    width: 92%;
+    transform: translateX(5%);
     font-size: 1.9rem;
     text-align: center;
     font-family: 'Freckle Face', cursive; }
+  .main-slides .slide-links {
+    overflow-x: scroll;
+    scroll-direction: horizontal;
+    scroll-behavior: smooth;
+    white-space: nowrap;
+    width: 100%;
+    height: 100%;
+    padding-top: 70px; }
+  .main-slides .logos {
+    padding-top: 50px; }
+    .main-slides .logos img {
+      margin: 20px; }
   .main-slides a {
     display: inline-block;
     margin: 0 10px;
@@ -233,33 +241,57 @@ h1 {
     display: none; }
   @media (min-width: 768px) {
     .main-slides {
+      display: block;
       padding: 0 10px 0;
       margin: 0 20px 2vh 20px;
-      display: grid;
       background-color: black;
       border-top-width: 50px;
-      height: 99vh;
+      height: 96vh;
       overflow: hidden;
-      margin-right: 70px;
-      grid-template-columns: repeat(10, 7.5vw);
-      grid-template-rows: 50px repeat(7, 80px); }
-      .main-slides a, .main-slides video {
+      margin-right: 70px; }
+      .main-slides .slide-links {
+        grid-gap: 10px;
+        grid-template-columns: repeat(10, 7.5vw);
+        grid-template-rows: 50px repeat(7, 11vh);
+        display: grid;
+        width: 100%;
+        height: 100%;
+        margin-top: -50px;
+        overflow: hidden;
+        padding: 0;
+        justify-content: center;
+        align-items: baseline; }
+        .main-slides .slide-links a, .main-slides .slide-links video {
+          margin: auto;
+          width: 100%;
+          height: 100%; }
+      .main-slides #h1, .main-slides h1 {
+        position: static;
+        width: 100%;
+        transform: translateX(2%); }
+      .main-slides video {
+        margin-top: -50px;
         margin: auto;
         width: 100%;
-        height: 100%; }
+        height: 100%;
+        display: block; }
       .main-slides video {
-        display: block; } }
+        padding-top: 50px;
+        padding-bottom: 20px;
+        height: 80vh;
+        width: 80vw;
+        margin: auto; } }
   .main-slides #h1, .main-slides h1 {
     grid-area: h; }
-  .main-slides a:nth-child(2) {
+  .main-slides a:nth-child(1) {
     grid-area: a; }
-  .main-slides a:nth-child(3) {
+  .main-slides a:nth-child(2) {
     grid-area: b; }
-  .main-slides a:nth-child(4) {
+  .main-slides a:nth-child(3) {
     grid-area: c; }
-  .main-slides a:nth-child(5) {
+  .main-slides a:nth-child(4) {
     grid-area: d; }
-  .main-slides a:nth-child(6) {
+  .main-slides a:nth-child(5) {
     grid-area: e; }
   .main-slides .logos {
     grid-area: l; }
@@ -297,15 +329,18 @@ h1 {
   background: rgba(0, 0, 0, 0.8);
   flex-direction: column;
   position: fixed;
-  font-family: 'Freckle Face', cursive;
   transition: 0.5s;
   padding-right: 70px; }
   .header-drop img {
-    width: 7vh;
+    width: 5vh;
     min-width: 30px; }
   .header-drop a {
-    font-size: 7vh;
-    display: block; }
+    font-family: 'Freckle Face', cursive;
+    letter-spacing: 1.5;
+    font-weight: 100;
+    font-size: 5vh;
+    display: block;
+    margin: 1vh 0; }
   .header-drop .logos {
     align-items: flex-end; }
   .header-drop .logos-wrap {
@@ -418,8 +453,9 @@ h1 {
     justify-content: center; }
   .logos img {
     cursor: pointer;
-    margin: 0 20px;
+    margin: 20px;
     padding: 0;
-    width: 7vh; }
+    width: 4vh;
+    min-width: 30px; }
 
 /*# sourceMappingURL=app.css.map */

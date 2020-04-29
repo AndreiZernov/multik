@@ -15,7 +15,7 @@ const MainPage = () => {
       <MainSlide name="still_life" data={smallPhotos.smallStill_life}/>
       <MainSlide name="candid" data={smallPhotos.smallCandid}/>
       <MainSlide name="urban" data={smallPhotos.smallUrban}/>
-      <MainSlide name="links" data={photos.video}/>
+      <MainSlide name="video" data={photos.video}/>
     </div>
   )
 }

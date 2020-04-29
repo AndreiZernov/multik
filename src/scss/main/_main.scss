@@ -30,14 +30,15 @@
     }
   }
   @media (min-width: 768px) {
-    width: 84%;
-    padding-right: 70px;
+    width: 100%;
+    padding: 70px 70px 20px;
+
     & #title {
       width: 250px;
     }
   }
   @media (min-width: 1024px) {
-    width: 75%;
+    width: 100%;
   }
 }
 

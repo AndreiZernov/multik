@@ -12,8 +12,9 @@
   }
   & img {
     cursor: pointer;
-    margin: 0 20px;
+    margin: 20px;
     padding: 0;
-    width: 7vh;
+    width: 4vh;
+    min-width: 30px;
   }
 }

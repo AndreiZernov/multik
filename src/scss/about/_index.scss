@@ -44,8 +44,17 @@
       font-size: 1rem;
     }
   }
-  & .logos-wrap {
-    margin-top: 20px;
+  & .logos {
+    & .logos-wrap {
+      flex-direction: column;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      margin-top: 20px;
+      & img {
+        display: inline;
+        margin: 5px;
+      }
+    }
   }
 
 }

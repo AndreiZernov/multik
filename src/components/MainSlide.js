@@ -1,5 +1,6 @@
 import React, {useRef, useEffect} from 'react'
 import { Link } from 'react-router-dom'
+import { useHistory } from 'react-router-dom'
 import gsap , { TimelineMax } from 'gsap'
 import ScrollMagic from 'scrollmagic'
 import { ScrollMagicPluginGsap } from "scrollmagic-plugin-gsap"
@@ -7,11 +8,20 @@ const controller = new ScrollMagic.Controller();
 ScrollMagicPluginGsap(ScrollMagic, gsap);
 
 
+
 const MainPage = ({name, data}) => {
+  const history = useHistory()
   const slides = useRef(null)
 
+  const refreshPage = () => history.push('/')
+
+  useEffect(() => {
+    window.addEventListener("resize", refreshPage);
+    return () => window.removeEventListener("resize", refreshPage);
+  })
+
   useEffect( () => {
-    if (window.innerWidth > 768 && name !== 'links') {
+    if (window.innerWidth > 768 && name !== 'video') {
       let tlHeroScroll1 = new TimelineMax({paused: true})
       .to(`.main-${name}1-img, .main-${name}3-img, .main-${name}4-img, .main-${name}5-img`, 1, { })
       .to(`.main-${name}1-img, .main-${name}3-img, .main-${name}4-img, .main-${name}5-img`, 1, { opacity: 0})
@@ -42,12 +52,12 @@ const MainPage = ({name, data}) => {
       .addTo(controller)
 
     }
-    else if (window.innerWidth > 768 && name === 'links') {
+    else if (window.innerWidth > 768 && name === 'video') {
       let tlHeroScroll3 = new TimelineMax({paused: true})
       .to(slides.current, 1, { justifyContent: 'center'})
 
       new ScrollMagic.Scene({
-        duration: 1000,
+        duration: 100,
         triggerHook: 0,
         triggerElement: slides.current
       })
@@ -67,12 +77,12 @@ const MainPage = ({name, data}) => {
       <div className='main-slides'
         style={{
           overflow: name === "video" &&  window.innerWidth < 768 && "hidden",
-          height: name === "video" && window.innerWidth < 768 && "140px",
+          height: name === "video" && window.innerWidth < 768 && "0",
         }}
       >
-        {name === 'video' ?
-          <h1>{name.toUpperCase().replace('_', ' ')}</h1> :
-          <Link id='h1' to={name}>{name.toUpperCase().replace('_', ' ')}</Link>
+        {name !== 'video' ?
+         <Link id='h1' to={name}>{name.toUpperCase().replace('_', ' ')}</Link> :
+         <h1>{name.toUpperCase().replace('_', ' ')}</h1>
         }
 
         {
@@ -90,7 +100,7 @@ const MainPage = ({name, data}) => {
               )}
             </div>
           :
-          <video muted controls width="auto" height="400" autoPlay>
+          <video muted controls>
             <source poster={require('../assets/mltl_white.png')}
               src={data[0]} type="video/mp4" />
             <source poster={require('../assets/mltl_white.png')}

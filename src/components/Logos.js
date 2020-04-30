@@ -3,11 +3,20 @@ import Popover from 'react-bootstrap/Popover'
 import OverlayTrigger from 'react-bootstrap/OverlayTrigger'
 
 
-const Logos = ({name, data}) =>
+const Logos = ({name}) =>
   <div className="logos">
     <div className="logos-wrap">
-      <img onClick={() => window.open( 'https://urlgeni.us/instagram/multik', '_blank' )} src={require('../assets/instagram.png')} alt="insagram" />
-      <img onClick={() => window.open( 'mailto:zuevmultik@me.com', '_blank' )} src={require('../assets/mail.png')} alt="mail" />
+      <div>
+        <img onClick={() => window.open( 'https://urlgeni.us/instagram/multik', '_blank' )} src={require('../assets/instagram.png')} alt="insagram" />
+        {name === 'about' && <span>  www.instagram.com/_mltk_/</span>}
+      </div>
+
+      <div>
+        <img onClick={() => window.open( 'mailto:zuevmultik@me.com', '_blank' )} src={require('../assets/mail.png')} alt="mail" />
+        {name === 'about' && <span> zuevmultik@me.com</span>}
+
+      </div>
+
       <OverlayTrigger
         key='top'
         placement='top'
@@ -19,9 +28,17 @@ const Logos = ({name, data}) =>
           </Popover>
         }
       >
-        <img src={require('../assets/wechat.png')} alt="wechat" />
+        <div>
+          <img src={require('../assets/wechat.png')} alt="wechat" />
+          {name === 'about' && <span>  zuev-multik</span>}
+        </div>
       </OverlayTrigger>{' '}
-      <img onClick={() => window.open( 'https://is.gd/Sebcnp', '_blank' )} src={require('../assets/whatsapp.png')} alt="whatsapp" />
+
+      <div>
+        <img onClick={() => window.open( 'https://is.gd/Sebcnp', '_blank' )} src={require('../assets/whatsapp.png')} alt="whatsapp" />
+        {name === 'about' && <span>  What's up: +8615618757295</span>}
+      </div>
+
     </div>
   </div>
 

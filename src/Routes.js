@@ -10,7 +10,6 @@ import GalleryPage from './pages/GalleryPage'
 import AboutPage from './pages/AboutPage'
 
 
-
 const Routes = () => {
   let location = useLocation();
   return (

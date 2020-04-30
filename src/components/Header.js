@@ -17,8 +17,8 @@ const Header = () => {
        }
      }
 
-     window.addEventListener("scroll", onScroll);
-     return () => window.removeEventListener("scroll", onScroll);
+     window.addEventListener("scroll", onScroll)
+     return () => window.removeEventListener("scroll", onScroll)
    }, []);
 
    const handleClick = () => {
@@ -28,7 +28,7 @@ const Header = () => {
   return (
     <>
       <Link className="home" to="/" onClick={() => handleClick()}><img src={require('../assets/mltl_white.png')} alt=''/></Link>
-      <Link className="header" to="/" onClick={() => handleClick()}><h1>MULTIK</h1></Link>
+      <Link className="header-name" to="/" onClick={() => handleClick()}><h1>MULTIK</h1></Link>
       <img
         className='header-icon'
         style={{top: positionY}}

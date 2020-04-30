@@ -6,12 +6,14 @@ import { Link, Switch, Route } from 'react-router-dom'
 import GalleryCarouselPage from './GalleryCarouselPage'
 
 
+
 const GalleryPage = () => {
   const { smallPhotos, photos } = useDataItems()
   let { url, path } = useRouteMatch()
   let topic = url.substring(1)
   let data = smallPhotos[`small${topic.replace(topic[0], topic[0].toUpperCase())}`]
   let videoData = photos[topic]
+
   new TimelineMax()
     .fromTo('.animatedLinks', .5, {opacity: 0}, {opacity: 0 })
     .to('.animatedLinks', .5, {opacity: 1 })
@@ -21,6 +23,7 @@ const GalleryPage = () => {
       <Switch>
         <Route exact path={path}>
           <div className='gallery'>
+            <Link to={`${url}/${topic}-info`} className="info-icon"><img src={require('../assets/info.png')} alt="info" /></Link>
             <p className='gallery-title'>{topic.toUpperCase().replace('_', ' ')}</p>
             {
               topic !== 'video' ?

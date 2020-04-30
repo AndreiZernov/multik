@@ -21,6 +21,14 @@
   }
 }
 
+.info-icon {
+  position: fixed;
+  opacity: 1;
+  bottom: 3vh;
+  right: 10px;
+  z-index: 10;
+}
+
 .gallery-title {
   position: fixed;
   top: 20px;
@@ -38,10 +46,10 @@
 }
 
 .btn-back {
-  position: absolute;
-  opacity: 0.6;
-  top: 70px;
-  right: 40px;
+  position: fixed;
+  opacity: .6;
+  bottom: 3vh;
+  right: 10px;
   z-index: 10;
   width: 50px ;
   cursor: pointer;

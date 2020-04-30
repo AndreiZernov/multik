@@ -10,7 +10,7 @@ const AboutPage = () => {
     <div className='about-page page'>
       <div className="face">
         <img id="profile" src={about.profileImg} alt="profile" />
-        <Logos />
+        <Logos name='about'/>
       </div>
       <div className='bio'>
         <h1>{about.name}</h1>

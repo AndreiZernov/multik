@@ -6,6 +6,7 @@
   width: 100vw;
   margin: auto;
   position: fixed;
+  background-image: url("../assets/MLTK3817.jpg");
   z-index: 100;
   display: flex;
   flex-direction: column;
@@ -202,7 +203,7 @@ h1 {
   grid-gap: 10px;
   justify-content: center;
   border-top: solid 5px #0a0b0d;
-  height: 420px;
+  height: 430px;
   background-color: inherit;
   display: block;
   position: relative; }
@@ -218,6 +219,7 @@ h1 {
     font-family: 'Freckle Face', cursive; }
   .main-slides .slide-links {
     overflow-x: scroll;
+    overflow-y: hidden;
     scroll-direction: horizontal;
     scroll-behavior: smooth;
     white-space: nowrap;
@@ -246,7 +248,7 @@ h1 {
       margin: 0 20px 2vh 20px;
       background-color: black;
       border-top-width: 50px;
-      height: 96vh;
+      height: 97vh;
       overflow: hidden;
       margin-right: 70px; }
       .main-slides .slide-links {
@@ -270,17 +272,14 @@ h1 {
         width: 100%;
         transform: translateX(2%); }
       .main-slides video {
-        margin-top: -50px;
-        margin: auto;
         width: 100%;
         height: 100%;
-        display: block; }
-      .main-slides video {
+        display: block;
         padding-top: 50px;
         padding-bottom: 20px;
         height: 80vh;
         width: 80vw;
-        margin: auto; } }
+        margin: -50px auto auto; } }
   .main-slides #h1, .main-slides h1 {
     grid-area: h; }
   .main-slides a:nth-child(1) {
@@ -305,7 +304,7 @@ h1 {
     width: 30px;
     height: 40px; }
 
-.header {
+.header-name {
   position: fixed;
   top: 20px;
   left: 50%;
@@ -313,10 +312,10 @@ h1 {
   transform: translateX(-50%);
   font-family: 'Frijole', cursive;
   z-index: 19; }
-  .header h1 {
-    font-size: 1rem; }
+  .header-name h1 {
+    font-size: 1.5rem; }
   @media (min-width: 768px) {
-    .header {
+    .header-name {
       display: block; } }
 
 .header-drop {
@@ -356,6 +355,38 @@ h1 {
   right: 10px;
   transition: 1s; }
 
+footer {
+  width: 100%;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0; }
+  footer p {
+    display: inline;
+    margin: 0 0 0 20px;
+    font-size: .8rem; }
+  footer .logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    min-width: 300px;
+    max-width: 390px;
+    margin: 0; }
+    footer .logos .logos-wrap {
+      margin: 0; }
+      footer .logos .logos-wrap img {
+        margin: 10px 4vw; }
+  @media (min-width: 786px) {
+    footer {
+      flex-direction: row; }
+      footer .logos {
+        align-items: flex-end; }
+        footer .logos .logos-wrap img {
+          margin: 10px 20px; } }
+
 .gallery {
   width: 90vw;
   height: 90vh;
@@ -376,6 +407,13 @@ h1 {
     background-size: contain;
     background-repeat: no-repeat; }
 
+.info-icon {
+  position: fixed;
+  opacity: 1;
+  bottom: 3vh;
+  right: 10px;
+  z-index: 10; }
+
 .gallery-title {
   position: fixed;
   top: 20px;
@@ -391,10 +429,10 @@ h1 {
   height: 80vh; }
 
 .btn-back {
-  position: absolute;
-  opacity: 0.6;
-  top: 70px;
-  right: 40px;
+  position: fixed;
+  opacity: .6;
+  bottom: 3vh;
+  right: 10px;
   z-index: 10;
   width: 50px;
   cursor: pointer; }
@@ -437,8 +475,14 @@ h1 {
         font-size: 3rem; }
       .about-page p {
         font-size: 1rem; } }
-  .about-page .logos-wrap {
+  .about-page .logos .logos-wrap {
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: flex-start;
     margin-top: 20px; }
+    .about-page .logos .logos-wrap img {
+      display: inline;
+      margin: 5px; }
 
 .logos {
   width: 100%;
@@ -457,5 +501,17 @@ h1 {
     padding: 0;
     width: 4vh;
     min-width: 30px; }
+
+.info {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  height: 100vh;
+  width: 90vw;
+  max-width: 500px;
+  text-align: justify; }
 
 /*# sourceMappingURL=app.css.map */

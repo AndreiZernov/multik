@@ -1,19 +1,30 @@
 import React, { useRef, useEffect } from 'react'
 import { TimelineMax, TimelineLite } from 'gsap'
+import { useHistory } from 'react-router-dom'
 import { Link } from 'react-router-dom'
 import ScrollMagic from 'scrollmagic'
 import Carousel from 'react-bootstrap/Carousel'
 const controller = new ScrollMagic.Controller();
 
 
+
 const MainHero = ({data}) => {
+  const history = useHistory()
   const hero = useRef(null)
+
+  const refreshPage = () => history.push('/')
+
+  useEffect(() => {
+    window.addEventListener("resize", refreshPage);
+    return () => window.removeEventListener("resize", refreshPage);
+  })
 
   useEffect( () => {
     new TimelineLite({delay: 1})
       .to('#title-bg', 2.5, { scaleX: 0 })
     new TimelineMax()
-      .fromTo('.hero-1, .hero-2, .hero-3, .hero-4, .hero-5', .5, {opacity: 0}, {opacity: 0 })      .to('.hero-1, .hero-2, .hero-3, .hero-4, .hero-5', .5, {opacity: 1 })
+      .fromTo('.hero-1, .hero-2, .hero-3, .hero-4, .hero-5', .5, {opacity: 0, scale: .8}, {opacity: 0 })
+      .to('.hero-1, .hero-2, .hero-3, .hero-4, .hero-5', .5, {opacity: 1, scale: 1 })
 
 
     if (window.innerWidth > 768) {
@@ -38,7 +49,7 @@ const MainHero = ({data}) => {
           <Link id='title' to='/about'>ARTEM ZUEV</Link>
           <div
             id="title-bg"
-            style={{ width: "100%", height: "50%", position: 'absolute', zIndex: 100, backgroundColor: 'rgb(10,11,13)', transform: 'scaleX(1)', transformOrigin: "right" }}
+            style={{ width: "100%", height: "50%", position: 'absolute', zIndex: 10, backgroundColor: 'rgb(10,11,13)', transform: 'scaleX(1)', transformOrigin: "right" }}
           />
           {heroLinks.map(link =>
             <a key={link} className="navbar-btn" href={`#${link}`}>{link.replace('_', ' ')}</a>

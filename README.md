@@ -29,8 +29,6 @@ Project is created with:
 
 <p align="center">To launch this project, go to https://multik.netlify.app/</p>
 
----
-
 <h3 align="center"> Navigation on Main Page</h3>
 
 <div align="center">

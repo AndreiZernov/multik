@@ -33,7 +33,7 @@ Project is created with:
 <h3 align="center"> Navigation on Main Page</h3>
 
 <div align="center">
-  <img src="./assets/readme1.gif">
+  <img src="./src/assets/readme1.gif">
 </div>
 
 <h3 align="center">Navigation through the Project's pages</h3>
@@ -41,7 +41,7 @@ Project is created with:
 <p align="center">Added gallery with Grid layout as well as Photo Carousel for zoom in interested photos, basic info about Collection.</p>
 
 <div align="center">
-  <img src="./assets/readme2.gif">
+  <img src="./src/assets/readme2.gif">
 </div>
 
 <h3 align="center"> Animation with GSAP and ScrollMagic</h3>
@@ -49,13 +49,13 @@ Project is created with:
 <p align="center">Zoom in/out of centered photo and slide to the next category</p>
 
 <div align="center">
-  <img src="./assets/readme3.gif">
+  <img src="./src/assets/readme3.gif">
 </div>
 
 <h3 align="center">Responsive Design</h3>
 
 <div align="center">
-  <img src="./assets/readme4.gif">
+  <img src="./src/assets/readme4.gif">
 </div>
 
 ---

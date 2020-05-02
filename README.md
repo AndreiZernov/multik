@@ -2,10 +2,11 @@
 <img src="./public/pngocean.png"></img>
 </div>
 
-<h1 align="center">Multik - gallery of projects and professional photo collection</h1>
+<h1 align="center">Multik</h1>
 <h3 align="center">Gallery of projects and professional photo collection</h3>
 
 [![Build Status](https://travis-ci.com/AndreiZernov/multik.svg?branch=master)](https://travis-ci.com/AndreiZernov/multik)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/AndreiZernov/react-finder/blob/master/LICENSE)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 [![npm version](https://badge.fury.io/js/npm.svg)](https://badge.fury.io/js/npm)
 
@@ -30,49 +31,32 @@ Project is created with:
 
 ---
 
-<h3 align="center"> Navigation</h3>
+<h3 align="center"> Navigation on Main Page</h3>
 
 <div align="center">
-  <!-- <img src="./assets/readme1.gif"> -->
+  <img src="./assets/readme1.gif">
 </div>
 
-<h3 align="center"> Login</h3>
+<h3 align="center">Navigation through the Project's pages</h3>
 
-<p align="center">Auth0 Authentication with easy Github and Google Login.</p>
+<p align="center">Added gallery with Grid layout as well as Photo Carousel for zoom in interested photos, basic info about Collection.</p>
 
 <div align="center">
-  <!-- <img src="./assets/readme2.gif"> -->
+  <img src="./assets/readme2.gif">
 </div>
 
-<h3 align="center"> Personal Account</h3>
+<h3 align="center"> Animation with GSAP and ScrollMagic</h3>
 
-<p align="center">Search functionality, Adding interesting resources and courses to account, Managing resources, Customize account.</p>
-
-<div align="center">
-  <!-- <img src="./assets/readme3.gif"> -->
-</div>
-
-<h3 align="center"> Edit more personal helpful links</h3>
-
-<p align="center">(editing, removing, adding) resources and courses.</p>
+<p align="center">Zoom in/out of centered photo and slide to the next category</p>
 
 <div align="center">
-  <!-- <img src="./assets/readme4.gif"> -->
-</div>
-
-<h3 align="center"> Recommend</h3>
-
-<p align="center">Recommend additional materials for everyone, all your recommendations will be added ASAP.
-Formspree form backend email service was used.</p>
-
-<div align="center">
-  <!-- <img src="./assets/readme5.gif"> -->
+  <img src="./assets/readme3.gif">
 </div>
 
 <h3 align="center">Responsive Design</h3>
 
 <div align="center">
-  <img src="./assets/readme6.gif">
+  <img src="./assets/readme4.gif">
 </div>
 
 ---

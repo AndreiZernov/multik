@@ -1,16 +1,16 @@
-import React from 'react'
-import Logos from '../components/Logos'
-
+import React from "react";
+import Logos from "../components/Logos";
 
 const Footer = () => {
-  let data = new Date()
+  let data = new Date();
   return (
     <footer>
-      <p>&copy; Copyright {data.getFullYear()}, Artem Zuev. All Rights Reserved</p>
+      <p>
+        &copy; Copyright {data.getFullYear()}, Artem Zuev. All Rights Reserved
+      </p>
       <Logos />
     </footer>
-  )
-}
+  );
+};
 
-
-export default Footer
+export default Footer;

@@ -1,27 +1,25 @@
-import React from 'react'
-import { withRouter } from 'react-router-dom'
-import { useDataItems } from "./context/dataItems-context"
+import React from "react";
+import { withRouter } from "react-router-dom";
+import { useDataItems } from "./context/dataItems-context";
 
-import Routes from './Routes'
-import Header from './components/Header'
-import LoadingPage from './pages/LoadingPage'
-
+import Routes from "./Routes";
+import Header from "./components/Header";
+import LoadingPage from "./pages/LoadingPage";
 
 const App = () => {
-  const { loading } = useDataItems()
+  const { loading } = useDataItems();
   return (
     <>
-      {
-        loading ?
-          <LoadingPage /> :
-          <>
-            <Header />
-            <Routes />
-          </>
-      }
+      {loading ? (
+        <LoadingPage />
+      ) : (
+        <>
+          <Header />
+          <Routes />
+        </>
+      )}
     </>
-  )
-}
+  );
+};
 
-
-export default withRouter(App)
+export default withRouter(App);

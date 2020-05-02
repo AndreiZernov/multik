@@ -15,7 +15,7 @@
   left: 50%;
   display: none;
   transform: translateX(-50%);
-  font-family: 'Frijole', cursive;
+  font-family: "Frijole", cursive;
   z-index: 19;
   & h1 {
     font-size: 1.5rem;
@@ -32,7 +32,7 @@
   top: 0;
   width: 100vw;
   height: 100vh;
-  background: rgba(0,0,0,.8);
+  background: rgba(0, 0, 0, 0.8);
   flex-direction: column;
   position: fixed;
   transition: 0.5s;
@@ -42,7 +42,7 @@
     min-width: 30px;
   }
   & a {
-    font-family: 'Freckle Face', cursive;
+    font-family: "Freckle Face", cursive;
     letter-spacing: 1.5;
     font-weight: 100;
     font-size: 5vh;

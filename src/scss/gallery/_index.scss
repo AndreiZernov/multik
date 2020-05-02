@@ -3,7 +3,7 @@
   height: 90vh;
   padding: 60px 0 10px;
   margin: auto;
-  background: rgb(10,11,13);
+  background: rgb(10, 11, 13);
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -32,7 +32,7 @@
 .gallery-title {
   position: fixed;
   top: 20px;
-  font-family: 'Freckle Face', cursive;
+  font-family: "Freckle Face", cursive;
   left: 50px;
 }
 
@@ -47,10 +47,10 @@
 
 .btn-back {
   position: fixed;
-  opacity: .6;
+  opacity: 0.6;
   bottom: 3vh;
   right: 10px;
   z-index: 10;
-  width: 50px ;
+  width: 50px;
   cursor: pointer;
 }

@@ -38,7 +38,7 @@ Project is created with:
 
 <h3 align="center">Navigation through the Project's pages</h3>
 
-<p align="center">Added gallery with Grid layout as well as Photo Carousel for zoom in interested photos, basic info about Collection.</p>
+<p align="center">Added gallery with Grid layout as well as Photo Carousel for zoom in interesting photos, basic info about Collection.</p>
 
 <div align="center">
   <img src="./src/assets/readme2.gif">

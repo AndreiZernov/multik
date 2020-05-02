@@ -5,6 +5,7 @@
 <h1 align="center">Multik</h1>
 <h3 align="center">Gallery of projects and professional photo collection</h3>
 
+[![Website multik.netlify.app](https://img.shields.io/website-up-down-green-red/http/perso.crans.org.svg)](https://multik.netlify.app/)
 [![Build Status](https://travis-ci.com/AndreiZernov/multik.svg?branch=master)](https://travis-ci.com/AndreiZernov/multik)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/AndreiZernov/react-finder/blob/master/LICENSE)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)

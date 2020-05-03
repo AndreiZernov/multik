@@ -5,6 +5,7 @@ import { TransitionGroup, CSSTransition } from "react-transition-group";
 import MainPage from "./pages/MainPage";
 import GalleryPage from "./pages/GalleryPage";
 import AboutPage from "./pages/AboutPage";
+import NotFoundPage from "./pages/NotFoundPage";
 
 const Routes = () => {
   let location = useLocation();
@@ -22,7 +23,7 @@ const Routes = () => {
             <Route path="/video" component={GalleryPage} />
             <Route exact path="/about" component={AboutPage} />
 
-            {/* <Route component={NotFoundPage} /> */}
+            <Route component={NotFoundPage} />
           </Switch>
         </CSSTransition>
       </TransitionGroup>

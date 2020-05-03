@@ -13,7 +13,6 @@ const InfoPage = () => {
     .replace("_", " ");
 
   let data = info.filter(item => item.title.toUpperCase() === topic)[0];
-  console.log(data);
   return (
     <div className="info">
       <h1>{data.title}</h1>

@@ -9,4 +9,9 @@
   width: 90vw;
   max-width: 500px;
   text-align: justify;
+  & a {
+    background-color: grey;
+    padding: 5px 20px;
+    border-radius: 10px;
+  }
 }

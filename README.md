@@ -12,6 +12,10 @@
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 [![npm version](https://badge.fury.io/js/npm.svg)](https://badge.fury.io/js/npm)
 
+<img src="./test_results/lighthouse_accessibility.svg"> <img src="./test_results/lighthouse_best-practices.svg"> <img src="./test_results/lighthouse_performance.svg">
+<img src="./test_results/lighthouse_seo.svg"> <img src="./test_results/lighthouse_pwa.svg">
+<img src="./test_results/lighthouse.svg">
+
 ---
 
 <h2 align="center"> Technologies</h2>

@@ -17,14 +17,14 @@
 
 Project is created with:
 
-<li>
-  <ul>React: 16.13.0</ul>
-  <ul>SASS: 4.13.1</ul>
-  <ul>Bootstrap: 4.4.1</ul>
-  <ul>Contentful: 7.14.3</ul>
-  <ul>scrollmagic: 2.0.7</ul>
-  <ul>react-gsap: 1.2.0</ul>
-</li>
+<ul>
+  <li>React: 16.13.0</li>
+  <li>SASS: 4.13.1</li>
+  <li>Bootstrap: 4.4.1</li>
+  <li>Contentful: 7.14.3</li>
+  <li>scrollmagic: 2.0.7</li>
+  <li>react-gsap: 1.2.0</li>
+</ul>
 
 ---
 
@@ -73,7 +73,9 @@ Project is created with:
 Reach out to me at one of the following places!
 
 Website at [React Finder](https://multik.netlify.app/)
+
 Twitter at [AndrewZ](https://twitter.com/AndrewZer)
+
 LinkedIn at [Andrew Zernov](https://www.linkedin.com/in/andrei-zernov/)
 
 ---

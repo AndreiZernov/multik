@@ -7,6 +7,30 @@ import { ScrollMagicPluginGsap } from "scrollmagic-plugin-gsap";
 const controller = new ScrollMagic.Controller();
 ScrollMagicPluginGsap(ScrollMagic, gsap);
 
+const portraitGrid = `"h h h h h h h h h h"
+                    "a a a ... b b b e e e"
+                    "a a a ... b b b e e e"
+                    "a a a ... b b b e e e"
+                    "a a a d d d c c c c"
+                    "a a a d d d c c c c"
+                    "a a a d d d c c c c"`;
+
+const conceptualGrid = `"h h h h h h h h h h"
+                    "a a a a b b b e e e"
+                    "a a a a b b b e e e"
+                    "a a a a b b b e e e"
+                    "d d d d d c c c c c"
+                    "d d d d d c c c c c"
+                    "d d d d d c c c c c"`;
+
+const stillLifeCandidGrid = `"h h h h h h h h h h"
+                    "d d d ... b b b e e e"
+                    "d d d ... b b b e e e"
+                    "d d d ... b b b e e e"
+                    "d d d c c c a a a a"
+                    "d d d c c c a a a a"
+                    "... ... ... c c c a a a a"`;
+
 const MainPage = ({ name, data }) => {
   const history = useHistory();
   const slides = useRef(null);
@@ -145,27 +169,3 @@ const MainPage = ({ name, data }) => {
 };
 
 export default MainPage;
-
-const portraitGrid = `"h h h h h h h h h h"
-                    "a a a ... b b b e e e"
-                    "a a a ... b b b e e e"
-                    "a a a ... b b b e e e"
-                    "a a a d d d c c c c"
-                    "a a a d d d c c c c"
-                    "a a a d d d c c c c"`;
-
-const conceptualGrid = `"h h h h h h h h h h"
-                    "a a a a b b b e e e"
-                    "a a a a b b b e e e"
-                    "a a a a b b b e e e"
-                    "d d d d d c c c c c"
-                    "d d d d d c c c c c"
-                    "d d d d d c c c c c"`;
-
-const stillLifeCandidGrid = `"h h h h h h h h h h"
-                    "d d d ... b b b e e e"
-                    "d d d ... b b b e e e"
-                    "d d d ... b b b e e e"
-                    "d d d c c c a a a a"
-                    "d d d c c c a a a a"
-                    "... ... ... c c c a a a a"`;

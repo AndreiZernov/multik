@@ -61,9 +61,6 @@ body {
   background-color: #0a0b0d;
   color: white;
   margin: 0;
-  font-family: -apple-system, "Helvetica Neue", sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 body::-webkit-scrollbar {
@@ -288,10 +285,24 @@ h1 {
   font-family: "Freckle Face", cursive;
 }
 
+.main-slides a {
+  display: inline-block;
+  margin: 0 10px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+}
+
+.main-slides video {
+  display: none;
+}
+
 .main-slides .slide-links {
   overflow-x: scroll;
   overflow-y: hidden;
-  scroll-direction: horizontal;
   scroll-behavior: smooth;
   white-space: nowrap;
   width: 100%;
@@ -302,6 +313,11 @@ h1 {
 .main-slides .logos {
   padding-top: 50px;
   grid-area: l;
+}
+
+.home img {
+  width: 30px;
+  height: 40px;
 }
 
 .main-slides .logos img {
@@ -319,21 +335,6 @@ h1 {
 .main-slides .main-slides::-webkit-scrollbar-thumb {
   background-color: darkgrey;
   outline: 1px solid slategrey;
-}
-
-.main-slides a {
-  display: inline-block;
-  margin: 0 10px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  width: 100%;
-  height: 300px;
-  overflow: hidden;
-}
-
-.main-slides video {
-  display: none;
 }
 
 @media (min-width: 768px) {
@@ -362,6 +363,15 @@ h1 {
     align-items: baseline;
   }
 
+  .main-slides video {
+    display: block;
+    padding-top: 50px;
+    padding-bottom: 20px;
+    height: 80vh;
+    width: 80vw;
+    margin: -50px auto auto;
+  }
+
   .main-slides .slide-links a,
   .main-slides .slide-links video {
     margin: auto;
@@ -375,15 +385,6 @@ h1 {
     width: 100%;
     transform: translateX(2%);
     grid-area: h;
-  }
-
-  .main-slides video {
-    display: block;
-    padding-top: 50px;
-    padding-bottom: 20px;
-    height: 80vh;
-    width: 80vw;
-    margin: -50px auto auto;
   }
 }
 
@@ -412,11 +413,6 @@ h1 {
   left: 10px;
   top: 10px;
   z-index: 19;
-}
-
-.home img {
-  width: 30px;
-  height: 40px;
 }
 
 .header-name {
@@ -452,10 +448,12 @@ h1 {
   transition: 0.5s;
   padding-right: 70px;
 }
+
 .header-drop img {
   width: 5vh;
   min-width: 30px;
 }
+
 .header-drop a {
   font-family: "Freckle Face", cursive;
   letter-spacing: 1.5;
@@ -464,13 +462,16 @@ h1 {
   display: block;
   margin: 1vh 0;
 }
+
 .header-drop .logos {
   align-items: flex-end;
 }
+
 .header-drop .logos-wrap {
   padding-right: 0;
   margin-right: 0;
 }
+
 .header-drop .logos-wrap img {
   margin-right: 0;
 }

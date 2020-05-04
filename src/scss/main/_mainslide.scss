@@ -1,6 +1,6 @@
 .main-slides {
-  grid-template-columns: repeat(1, minmax(350px, 1fr));
-  grid-template-rows: 50px repeat(auto-fit, minmax(230px, 1fr));
+  grid-template-columns: minmax(350px, 1fr);
+  grid-template-rows: 50px minmax(230px, 1fr);
   grid-template-areas: "h" "a" "b" "c" "d" "e";
   grid-gap: 10px;
   justify-content: center;

@@ -3,6 +3,7 @@
   left: 10px;
   top: 10px;
   z-index: 19;
+
   & img {
     width: 30px;
     height: 40px;
@@ -17,6 +18,7 @@
   transform: translateX(-50%);
   font-family: "Frijole", cursive;
   z-index: 19;
+
   & h1 {
     font-size: 1.5rem;
   }
@@ -37,10 +39,12 @@
   position: fixed;
   transition: 0.5s;
   padding-right: 70px;
+
   & img {
     width: 5vh;
     min-width: 30px;
   }
+
   & a {
     font-family: "Freckle Face", cursive;
     letter-spacing: 1.5;
@@ -49,12 +53,15 @@
     display: block;
     margin: 1vh 0;
   }
+
   .logos {
     align-items: flex-end;
   }
+
   .logos-wrap {
     padding-right: 0;
     margin-right: 0;
+
     & img {
       margin-right: 0;
     }

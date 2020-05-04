@@ -5,6 +5,7 @@ footer {
   justify-content: space-between;
   align-items: center;
   margin: 20px 0;
+
   & p {
     display: inline;
     margin: 0 0 0 20px;
@@ -20,8 +21,10 @@ footer {
     min-width: 300px;
     max-width: 390px;
     margin: 0;
+
     & .logos-wrap {
       margin: 0;
+
       & img {
         margin: 10px 4vw;
       }
@@ -29,8 +32,10 @@ footer {
   }
   @media (min-width: 786px) {
     flex-direction: row;
+
     & .logos {
       align-items: flex-end;
+
       & .logos-wrap {
         & img {
           margin: 10px 20px;

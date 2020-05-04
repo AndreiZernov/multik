@@ -10,25 +10,30 @@
   text-align: center;
   font-family: sans-serif;
   padding: 100px 2vw 20px;
+
   & h1 {
     font-size: 2rem;
     font-family: "Frijole", cursive;
   }
+
   & p {
     font-size: 0.8rem;
     text-align: justify;
   }
+
   & .face {
     min-width: 300px;
     max-width: 400px;
     @media (min-width: 768px) {
       margin-left: 55px;
     }
+
     & #profile {
       width: 300px;
       max-width: 400px;
     }
   }
+
   & .bio {
     min-width: 250px;
     max-width: 500px;
@@ -37,19 +42,23 @@
   @media (min-width: 768px) {
     flex-direction: row-reverse;
     flex-wrap: nowrap;
+
     & h1 {
       font-size: 3rem;
     }
+
     & p {
       font-size: 1rem;
     }
   }
+
   & .logos {
     & .logos-wrap {
       flex-direction: column;
       flex-wrap: wrap;
       align-items: flex-start;
       margin-top: 20px;
+
       & img {
         display: inline;
         margin: 5px;

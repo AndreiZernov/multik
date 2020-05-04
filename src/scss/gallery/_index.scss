@@ -8,10 +8,12 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+
   & video {
     margin: 10px;
     max-width: 90vw;
   }
+
   & img {
     max-height: 200px;
     width: auto;

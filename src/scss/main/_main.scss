@@ -29,6 +29,7 @@
     text-align: center;
     font-family: "Freckle Face", cursive;
   }
+
   & .navbar-btn {
     margin: 0 0 5px 1.8vw;
     text-align: right;
@@ -36,6 +37,7 @@
     color: silver;
     transition: 1s;
     font-weight: 600;
+
     &:hover {
       color: white;
     }
@@ -64,6 +66,7 @@
   justify-content: center;
   background: black;
   overflow: hidden;
+
   & a {
     margin: auto;
     background-position: center;
@@ -75,6 +78,7 @@
     align-items: flex-end;
     justify-content: center;
   }
+
   @media (min-width: 768px) {
     padding-top: 10px;
     margin-right: 70px;
@@ -89,22 +93,28 @@
       "d d d d d c c c c ..."
       "d d d d d c c c c ...";
   }
+
   @media (min-width: 1024px) {
     grid-template-columns: repeat(10, 8.1vw);
     grid-template-rows: repeat(6, 70px);
   }
+
   & .hero-1 {
     grid-area: b;
   }
+
   & .hero-2 {
     grid-area: a;
   }
+
   & .hero-3 {
     grid-area: c;
   }
+
   & .hero-4 {
     grid-area: d;
   }
+
   & .hero-5 {
     grid-area: e;
   }

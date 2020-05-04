@@ -2,6 +2,16 @@ import React, { useState, useLayoutEffect } from "react";
 import { Link } from "react-router-dom";
 import Logos from "./Logos";
 
+const Links = [
+  "portrait",
+  "conceptual",
+  "still_life",
+  "candid",
+  "urban",
+  "video",
+  "about",
+];
+
 const Header = () => {
   const [openMenu, setOpenMenu] = useState(false);
   const [positionY, setPositionY] = useState(10);
@@ -62,13 +72,3 @@ const Header = () => {
 };
 
 export default Header;
-
-const Links = [
-  "portrait",
-  "conceptual",
-  "still_life",
-  "candid",
-  "urban",
-  "video",
-  "about",
-];

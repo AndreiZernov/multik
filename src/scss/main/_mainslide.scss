@@ -26,7 +26,6 @@
   .slide-links {
     overflow-x: scroll;
     overflow-y: hidden;
-    scroll-direction: horizontal;
     scroll-behavior: smooth;
     white-space: nowrap;
     width: 100%;
@@ -81,6 +80,15 @@
     overflow: hidden;
     margin-right: 70px;
 
+    & video {
+      display: block;
+      padding-top: 50px;
+      padding-bottom: 20px;
+      height: 80vh;
+      width: 80vw;
+      margin: -50px auto auto;
+    }
+
     .slide-links {
       grid-gap: 10px;
       grid-template-columns: repeat(10, 7.5vw);
@@ -108,15 +116,6 @@
       width: 100%;
       transform: translateX(2%);
       grid-area: h;
-    }
-
-    & video {
-      display: block;
-      padding-top: 50px;
-      padding-bottom: 20px;
-      height: 80vh;
-      width: 80vw;
-      margin: -50px auto auto;
     }
   }
 

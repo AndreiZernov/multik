@@ -6,6 +6,8 @@ import ScrollMagic from "scrollmagic";
 import Carousel from "react-bootstrap/Carousel";
 const controller = new ScrollMagic.Controller();
 
+const heroLinks = ["portrait", "conceptual", "still_life", "candid", "urban"];
+
 const MainHero = ({ data }) => {
   const history = useHistory();
   const hero = useRef(null);
@@ -98,5 +100,3 @@ const MainHero = ({ data }) => {
 };
 
 export default MainHero;
-
-const heroLinks = ["portrait", "conceptual", "still_life", "candid", "urban"];

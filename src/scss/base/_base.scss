@@ -2,6 +2,20 @@
 @import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Freckle+Face&display=swap");
 
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: normal;
+  font-size: 1.1rem;
+  line-height: 1.4;
+  letter-spacing: 1px;
+  background-color: rgb(10, 11, 13);
+  color: white;
+  margin: 0;
+  font-family: -apple-system, "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 body::-webkit-scrollbar {
   width: 1em;
 }
@@ -13,22 +27,6 @@ body::-webkit-scrollbar-track {
 body::-webkit-scrollbar-thumb {
   background-color: darkgrey;
   outline: 1px solid slategrey;
-}
-
-body {
-  font-family: "Lato", sans-serif;
-  font-weight: normal;
-  font-size: 1.1rem;
-  line-height: 1.4;
-  letter-spacing: 1px;
-  background-color: rgb(10, 11, 13);
-  color: white;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 a,

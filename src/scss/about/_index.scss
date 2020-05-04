@@ -24,6 +24,7 @@
   & .face {
     min-width: 300px;
     max-width: 400px;
+
     @media (min-width: 768px) {
       margin-left: 55px;
     }

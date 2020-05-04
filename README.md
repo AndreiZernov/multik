@@ -72,7 +72,7 @@ Project is created with:
 
 Reach out to me at one of the following places!
 
-Website at [React Finder](https://multik.netlify.app/)
+Website at [Multik](https://multik.netlify.app/)
 
 Twitter at [AndrewZ](https://twitter.com/AndrewZer)
 
@@ -84,6 +84,6 @@ LinkedIn at [Andrew Zernov](https://www.linkedin.com/in/andrei-zernov/)
 
 MIT license [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/AndreiZernov/react-finder/blob/master/LICENSE)
 
-Copyright 2020 © React Finder
+Copyright 2020 © Artem Zuev
 
 </div>

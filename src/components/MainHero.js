@@ -28,19 +28,19 @@ const MainHero = ({ data }) => {
       )
       .to(".hero-1, .hero-2, .hero-3, .hero-4, .hero-5", 0.5, {
         opacity: 1,
-        scale: 1
+        scale: 1,
       });
 
     if (window.innerWidth > 768) {
       let tlHero = new TimelineMax({ paused: true }).to(".navbar", 1, {
-        scale: 1
+        scale: 1,
       });
 
       new ScrollMagic.Scene({
         duration: 1000,
         triggerHook: 0,
         offset: -10,
-        triggerElement: hero.current
+        triggerElement: hero.current,
       })
         .setTween(tlHero.restart())
         .setPin(hero.current)
@@ -55,7 +55,7 @@ const MainHero = ({ data }) => {
           ARTEM ZUEV
         </Link>
         <div id="title-bg" />
-        {heroLinks.map(link => (
+        {heroLinks.map((link) => (
           <a key={link} className="navbar-btn" href={`#${link}`}>
             {link.replace("_", " ")}
           </a>
@@ -65,7 +65,7 @@ const MainHero = ({ data }) => {
         <div
           className="hero"
           style={{
-            backgroundColor: window.innerWidth > 768 ? "black" : "inherit"
+            backgroundColor: window.innerWidth > 768 ? "black" : "inherit",
           }}
         >
           {heroLinks.map((link, i) => (

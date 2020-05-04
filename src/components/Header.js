@@ -44,13 +44,13 @@ const Header = () => {
         style={{
           transform: openMenu ? "translateX(0)" : "translateX(100%)",
           opacity: openMenu ? 1 : 0,
-          zIndex: openMenu ? 18 : 0
+          zIndex: openMenu ? 18 : 0,
         }}
       >
         <Link to="/" onClick={() => handleClick()}>
           <img src={require("../assets/home.png")} alt="home" />
         </Link>
-        {Links.map(link => (
+        {Links.map((link) => (
           <Link key={link} onClick={() => handleClick()} to={`/${link}`}>
             {link.toUpperCase().replace("_", " ")}
           </Link>
@@ -70,5 +70,5 @@ const Links = [
   "candid",
   "urban",
   "video",
-  "about"
+  "about",
 ];

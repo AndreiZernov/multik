@@ -45,8 +45,8 @@ const GalleryPage = () => {
                     controls
                     width="auto"
                     height="250"
-                    onMouseOver={event => event.target.play()}
-                    onMouseOut={event => event.target.pause()}
+                    onMouseOver={(event) => event.target.play()}
+                    onMouseOut={(event) => event.target.pause()}
                     className="animatedLinks"
                   >
                     <source src={link} type="video/mp4" />

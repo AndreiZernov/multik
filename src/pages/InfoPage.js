@@ -6,13 +6,9 @@ const InfoPage = () => {
   const { info } = useDataItems();
   const history = useHistory();
   let { url } = useRouteMatch();
-  let topic = url
-    .split("/")[2]
-    .split("-")[0]
-    .toUpperCase()
-    .replace("_", " ");
+  let topic = url.split("/")[2].split("-")[0].toUpperCase().replace("_", " ");
 
-  let data = info.filter(item => item.title.toUpperCase() === topic)[0];
+  let data = info.filter((item) => item.title.toUpperCase() === topic)[0];
   return (
     <div className="info">
       <h1>{data.title}</h1>

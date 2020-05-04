@@ -7,7 +7,7 @@ const GalleryCarouselPage = ({ data }) => {
   const history = useHistory();
   let { url } = useRouteMatch();
   const [index, setIndex] = useState(+url.split("/")[2].split("-")[2] || 0);
-  const handleSelect = selected => {
+  const handleSelect = (selected) => {
     setIndex(selected);
   };
 

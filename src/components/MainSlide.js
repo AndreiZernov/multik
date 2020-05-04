@@ -40,7 +40,7 @@ const MainPage = ({ name, data }) => {
       let tlHeroScroll2 = new TimelineMax({ paused: true })
         .to(`.main-${name}2-img`, 1, {})
         .to(`.main-${name}2-img`, 1, {
-          transform: "translate(-15%, 50%) scale(2)"
+          transform: "translate(-15%, 50%) scale(2)",
         })
         .to(`.main-${name}2-img`, 1, { scale: 3 })
         .to(`.main-${name}2-img`, 2, { opacity: 0 })
@@ -49,7 +49,7 @@ const MainPage = ({ name, data }) => {
       new ScrollMagic.Scene({
         duration: 1000,
         triggerHook: 0,
-        triggerElement: slides.current
+        triggerElement: slides.current,
       })
         .setTween(tlHeroScroll1.restart())
         .setPin(slides.current)
@@ -58,7 +58,7 @@ const MainPage = ({ name, data }) => {
       new ScrollMagic.Scene({
         duration: 1000,
         triggerHook: 0,
-        triggerElement: slides.current
+        triggerElement: slides.current,
       })
         .setTween(tlHeroScroll2.restart())
         .addTo(controller);
@@ -72,7 +72,7 @@ const MainPage = ({ name, data }) => {
       new ScrollMagic.Scene({
         duration: 100,
         triggerHook: 0,
-        triggerElement: slides.current
+        triggerElement: slides.current,
       })
         .setTween(tlHeroScroll3.restart())
         .setPin(slides.current)
@@ -90,7 +90,7 @@ const MainPage = ({ name, data }) => {
         className="main-slides"
         style={{
           overflow: name === "video" && window.innerWidth < 768 && "hidden",
-          height: name === "video" && window.innerWidth < 768 && "0"
+          height: name === "video" && window.innerWidth < 768 && "0",
         }}
       >
         {name !== "video" ? (
@@ -112,10 +112,10 @@ const MainPage = ({ name, data }) => {
                   ? conceptualGrid
                   : name === "candid" || name === "still_life"
                   ? stillLifeCandidGrid
-                  : null
+                  : null,
             }}
           >
-            {[1, 2, 3, 4, 5].map(num => (
+            {[1, 2, 3, 4, 5].map((num) => (
               <Link
                 key={num}
                 to={name}

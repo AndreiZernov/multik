@@ -4,6 +4,7 @@ import { useHistory } from "react-router-dom";
 import { Link } from "react-router-dom";
 import ScrollMagic from "scrollmagic";
 import Carousel from "react-bootstrap/Carousel";
+import AnchorLink from "react-anchor-link-smooth-scroll";
 const controller = new ScrollMagic.Controller();
 
 const heroLinks = ["portrait", "conceptual", "still_life", "candid", "urban"];
@@ -58,9 +59,14 @@ const MainHero = ({ data }) => {
         </Link>
         <div id="title-bg" />
         {heroLinks.map((link) => (
-          <a key={link} className="navbar-btn" href={`#${link}`}>
+          <AnchorLink
+            offset="20"
+            key={link}
+            className="navbar-btn"
+            href={`#${link}`}
+          >
             {link.replace("_", " ")}
-          </a>
+          </AnchorLink>
         ))}
       </div>
       {window.innerWidth > 768 ? (

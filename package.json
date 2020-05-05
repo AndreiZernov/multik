@@ -10,6 +10,7 @@
     "contentful": "^7.14.3",
     "node-sass": "^4.13.1",
     "react": "^16.13.0",
+    "react-anchor-link-smooth-scroll": "^1.0.12",
     "react-bootstrap": "^1.0.0",
     "react-dom": "^16.13.0",
     "react-gsap": "^1.2.0",

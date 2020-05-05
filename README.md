@@ -3,7 +3,7 @@
 </div>
 
 <h1 align="center">Multik</h1>
-<h3 align="center">Gallery of projects and professional photo collection</h3>
+<h3 align="center">Gallery of Projects and Photo Collection for Professional photographer Artem Zuev, React Progressive Web Application with the integration of React Context and Hooks, SASS, QraphQl, Bootstrap component library, Animation with ScrollMagic and GSAP libraries.</h3>
 
 [![Website multik.netlify.app](https://img.shields.io/website-up-down-green-red/http/perso.crans.org.svg)](https://multik.netlify.app/)
 [![Build Status](https://travis-ci.com/AndreiZernov/multik.svg?branch=master)](https://travis-ci.com/AndreiZernov/multik)
@@ -71,8 +71,6 @@ Project is created with:
 [![Ask Me Anything !](https://img.shields.io/badge/Ask%20me-anything-1abc9c.svg)](https://github.com/AndreiZernov)
 
 Reach out to me at one of the following places!
-
-Website at [Multik](https://multik.netlify.app/)
 
 Twitter at [AndrewZ](https://twitter.com/AndrewZer)
 

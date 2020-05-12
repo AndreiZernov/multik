@@ -1,8 +1,11 @@
 .home {
   position: fixed;
   left: 10px;
-  top: 10px;
   z-index: 19;
+  padding-top: 10px;
+  background-color: rgb(10, 11, 13);
+  height: 60px;
+  width: 100vw;
 
   & img {
     width: 30px;

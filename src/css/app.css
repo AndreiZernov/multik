@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Frijole&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Freckle+Face&display=swap");
+
 body {
   font-family: "Lato", sans-serif;
   font-weight: normal;
@@ -159,8 +160,11 @@ h1 {
 .home {
   position: fixed;
   left: 10px;
-  top: 10px;
   z-index: 19;
+  padding-top: 10px;
+  background-color: #0a0b0d;
+  height: 60px;
+  width: 100vw;
 }
 
 .home img {
